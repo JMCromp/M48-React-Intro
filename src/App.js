@@ -4,11 +4,13 @@ import Netflix from './components/Netflix';
 import Abnb from './components/Abnb';
 import Bbc from './components/Bbc';
 import Statetest from './components/Statetest';
+import Clicker from './components/Clicker';
 import { useState } from 'react';
 
 function App() {
   const [example, setExample] = useState("Jordan");
   const [testState, setTestState] = useState();
+  const [clicker, setClicker] = useState(0);
 
   const changeSomething = () => {
     setExample("Not Jordan");
@@ -16,6 +18,7 @@ function App() {
 
   return (
     <div className="App">
+      <Clicker clickerValue={clicker} clickerMethod={setClicker}/>
       <p>{example}</p>
       <button onClick={changeSomething}>Click me</button>
       <Abnb data={example}/>
