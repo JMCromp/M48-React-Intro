@@ -1,0 +1,12 @@
+.netflix-parent {
+    display: flex;
+    width: 87vw;
+    margin: 0 auto;
+    padding: 5px;
+    background-color: rgb(34, 34, 34);
+    margin: 100px;
+}
+
+.netflix-child {
+    width: 20%;
+}

@@ -1,0 +1,23 @@
+.abnb-parent {
+    display: flex;
+    width: 87vw;
+    margin: 0 auto;
+    padding: 30px 5px 5px 5px;
+    background-color: whitesmoke;
+    margin: 100px;
+    border: 1px black solid;
+}
+
+.abnb-child {
+    width: 25%;
+}
+
+.abnb-child div img {
+    border-radius: 8px;
+}
+
+.abnb-child div p {
+    text-align: left;
+    font-weight: 600;
+    padding-left: 40px;
+}

@@ -1,0 +1,37 @@
+.bbc-parent {
+    display: flex;
+    margin: 0 auto;
+    width: 75vw;
+    margin-bottom: 100px;
+}
+
+.bbc-child {
+    width: 25%;
+    /* border: 2px red solid; */
+}
+
+.bbc-child div h3 {
+    font-size: 16px;
+}
+
+.bbc-child div p {
+    font-size: 12px;
+}
+
+.bbc-h3 {
+    width: 90%;
+    padding-left: 25px;
+    text-align: left;
+}
+
+.bbc-p {
+    width: 90%;
+    padding-left: 25px;
+    text-align: left;
+}
+
+.bbc-bottom {
+    width: 90%;
+    padding-left: 25px;
+    text-align: left;
+}
