@@ -11,18 +11,31 @@ function App() {
   const [example, setExample] = useState("Jordan");
   const [testState, setTestState] = useState();
   const [clicker, setClicker] = useState(0);
+  const [showClicker, setShowClicker] = useState(false);
 
   const changeSomething = () => {
     setExample("Not Jordan");
   }
 
+  const displayClicker = () => {
+    if (showClicker) {
+      setShowClicker(false);
+    } else {
+      setShowClicker(true);
+    }
+  }
+
   return (
     <div className="App">
-      <Clicker clickerValue={clicker} clickerMethod={setClicker}/>
+      <button onClick={displayClicker}>Clicker</button>
+       
+      {/* { bool ? ifTrueDoThis : ifFalseDoThis } */}
+      {showClicker ? <Clicker clickerValue={clicker} clickerMethod={setClicker} /> : <p>Click to show clicker</p>}
+
       <p>{example}</p>
       <button onClick={changeSomething}>Click me</button>
-      <Abnb data={example}/>
-      <Statetest data={testState} dataMethod={setTestState}/>
+      <Abnb data={example} />
+      <Statetest data={testState} dataMethod={setTestState} />
       <Netflix />
       <Bbc />
       <Person word="jelly" sub="1" image="" />
