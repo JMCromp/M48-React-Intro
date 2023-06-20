@@ -5,6 +5,7 @@ import Abnb from './components/Abnb';
 import Bbc from './components/Bbc';
 import Statetest from './components/Statetest';
 import Clicker from './components/Clicker';
+import Mapexample from './components/Mapexample';
 import { useState } from 'react';
 
 function App() {
@@ -24,11 +25,12 @@ function App() {
       setShowClicker(true);
     }
   }
-
+ 
   return (
     <div className="App">
+      <Mapexample />
       <button onClick={displayClicker}>Clicker</button>
-       
+
       {/* { bool ? ifTrueDoThis : ifFalseDoThis } */}
       {showClicker ? <Clicker clickerValue={clicker} clickerMethod={setClicker} /> : <p>Click to show clicker</p>}
 
