@@ -2,7 +2,7 @@ import './abnb.css';
 import abnb1 from './images/abnb1.jpg'
 import abnb2 from './images/abnb2.jpg'
 
-const Abnb = () => {
+const Abnb = (props) => {
 
     return (
         <div className='abnb-parent'>
@@ -11,7 +11,7 @@ const Abnb = () => {
                     <img src={abnb1}></img>
                 </div>
                 <div>
-                    <p>Entire homes</p>
+                    <p>{props.data}</p>
                 </div>
             </div>
             <div className='abnb-child'>
