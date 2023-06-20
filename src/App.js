@@ -54,8 +54,8 @@ function App() {
       <Person word="grogu" sub="4" image="" />
 
       {/* Example of component mapping, imagine that in use for the BBC cards */}
-      {mappingExample.map((value) => {
-        return <Componentmapping title={value.title} text={value.text}/>
+      {mappingExample.map((value, index) => {
+        return <Componentmapping key={index} title={value.title} text={value.text}/>
       })}
       <Mapexample />
     </div>
