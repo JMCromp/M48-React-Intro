@@ -1,0 +1,23 @@
+.calculator-parent {
+    display: flex;
+    flex-wrap: wrap;
+    width: 350px;
+    height: 500px;
+    border: 2px solid black;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.calculator-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 25%;
+    height: 16.66%;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+}

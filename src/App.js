@@ -7,6 +7,7 @@ import Statetest from './components/Statetest';
 import Clicker from './components/Clicker';
 import Mapexample from './components/Mapexample';
 import Componentmapping from './components/Componentmapping';
+import Calculator from './components/Calculator';
 import { useState } from 'react';
 
 function App() {
@@ -16,11 +17,14 @@ function App() {
   const [showClicker, setShowClicker] = useState(false);
   const [mappingExample, setMappingExample] = useState(
     [
-      {title: "Mapped component 1", text: "some text for 1"},
-      {title: "Mapped component 2", text: "some text for 2"},
-      {title: "Mapped component 3", text: "some text for 3"},
-      {title: "Mapped component 4", text: "some text for 4"}
+      { title: "Mapped component 1", text: "some text for 1" },
+      { title: "Mapped component 2", text: "some text for 2" },
+      { title: "Mapped component 3", text: "some text for 3" },
+      { title: "Mapped component 4", text: "some text for 4" }
     ]
+  );
+  const [calculatorButtons, setCalculatorButton] = useState(
+    ["%", "CE", "C", "<-", "1/x", "x2", "2/x", "/", "7", "8", "9", "X", "4", "5", "6", "-", "1", "2", "3", "+", "x/-", "0", ".", "="]
   );
 
   const changeSomething = () => {
@@ -37,6 +41,8 @@ function App() {
 
   return (
     <div className="App">
+      <Calculator data={calculatorButtons} function={setCalculatorButton}/>
+
       <button onClick={displayClicker}>Clicker</button>
 
       {/* { bool ? ifTrueDoThis : ifFalseDoThis } */}
@@ -55,7 +61,7 @@ function App() {
 
       {/* Example of component mapping, imagine that in use for the BBC cards */}
       {mappingExample.map((value, index) => {
-        return <Componentmapping key={index} title={value.title} text={value.text}/>
+        return <Componentmapping key={index} title={value.title} text={value.text} />
       })}
       <Mapexample />
     </div>
